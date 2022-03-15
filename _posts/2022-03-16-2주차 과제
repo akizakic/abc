@@ -1,0 +1,65 @@
+---
+layout : post
+title:  2주차 과제
+date:   2022-03-16 00:34:08 +0900
+categories: jekyll update
+
+
+---
+
+# 2주차 과제
+
+우리는 2주차에 알고리즘을 배우고 실습 내용으로 깃허브 연동에 대해서 알아보았다.
+
+## 알고리즘
+
+![logo](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.18169-9/10734235_1553914438154408_7571793806936051752_n.png?stp=dst-png_s526x395&_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=lQfBp4YVzrEAX-Ni1Q8&_nc_ht=scontent-ssn1-1.xx&oh=00_AT86udJCfHaJNdskzGDeZcR8_f3azwi8kRG0ctInKwfO_g&oe=62580A61)
+
+
+알고리즘 성능 분석(analysis)에는 **공간복잡도**와 **시간복잡도**가 중요한 고려요소로 작용한다.  
+
+![logo](https://t1.daumcdn.net/cfile/tistory/99275E4D5B78408624)
+
+
+1. *빅오 표기법( Big- oh )*
+![logo](https://t1.daumcdn.net/cfile/tistory/267A5850533CF39105)
+2. *빅-오메가 표기법( Big - Omega)* 
+![logo](https://t1.daumcdn.net/cfile/tistory/2207F248533CF39E26)
+3. *세타( Theta ) 표기법*
+![logo](https://t1.daumcdn.net/cfile/tistory/211FDA35533CF5B21A)
+
+---
+
+## Git / Github
+
+* git: 로컬 저장소 버전관리, 협업
+* github: git -> 온라인 저장소 : 협업툴
+
+* github pages: 웹 호스팅: 무료 (지킬)
+
+
+### 명령어  
+```
+저장소 초기화      
+    `git init [directory]`   
+    `git clone [repositoty] [directory]`
+
+```    
+
+### 버전 관리 (업데이트)
+```
+`git pull` : 온라인 저장소 -> 로컬 저장소 다운로드        
+`git add [file...]` : 커밋할 파일들 스테이징    
+`git commit -m [message]` : 스테이징 파일 -> 버전 업데이트   
+`git push`  : 로컬 저장소 -> 온라인 저장소 업로드
+```    
+
+### 상태
+    `git status`    
+    `git log`   
+
+
+
+
+
+
