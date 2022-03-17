@@ -21,12 +21,15 @@ categories: jekyll update
 ![logo](https://t1.daumcdn.net/cfile/tistory/99275E4D5B78408624)
 
 
-1. *빅오 표기법( Big- oh )*
-![logo](https://t1.daumcdn.net/cfile/tistory/267A5850533CF39105)
+1. *빅오 표기법( Big- oh )* 
+
+![logo](https://t1.daumcdn.net/cfile/tistory/267A5850533CF39105)    
 2. *빅-오메가 표기법( Big - Omega)* 
-![logo](https://t1.daumcdn.net/cfile/tistory/2207F248533CF39E26)
-3. *세타( Theta ) 표기법*
-![logo](https://t1.daumcdn.net/cfile/tistory/211FDA35533CF5B21A)
+
+![logo](https://t1.daumcdn.net/cfile/tistory/2207F248533CF39E26)    
+3. *세타( Theta ) 표기법*   
+
+![logo](https://t1.daumcdn.net/cfile/tistory/211FDA35533CF5B21A)    
 
 ---
 
