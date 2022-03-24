@@ -1,0 +1,203 @@
+---
+layout : post
+title:  3주차 과제
+date:   2022-03-21 20:44:08 +0900
+categories: jekyll update
+
+---
+
+# 3주차 과제
+
+## 알고리즘
+
+0. *분할 정복(Divide-and-Conquer) 알고리즘*     
+분할정복 알고리즘이란 주어진 문제의 입력을 분할하여 문제를 해결(정복)하는 방식의 알고리즘이다.  
+![logo](https://t1.daumcdn.net/cfile/tistory/222AA34554B13ACB12)    
+분할 정복 알고리즘은 분할되는 부분문제의 수와 부분문제의 크기에 따라서 다음과 같이 분류할 수 있다.  
+- 문제가 a개로 분할되고, 부분문제의 크기가 1/b로 감소하는 알고리즘  
+-a= 3,b=2인 경우, *합병정렬*,*최근접 점의 쌍 찾기*,공제선 문제      
+-a=4,b=2인 경우, 큰 정수의 곱셈
+
+- 문제가 2개로 분할되고, 부분문제의 크기가 일정하지 않은 크기로 감소하는 알고리즘: *퀵 정렬*   
+- 문제가 2개로 분할되나, 그중에 1개의 부분문제는 고려할 필요 없으며, 부분문제의 크기가 1/2로 감소하는 알고리즘: *이진탐색*
+- 문제가 2개로 분할되나, 그중에 1개의 부분문제는 고려할 필요 없으며,부분문제의 크기가 일정하지 않은 크기로 감소하는 알고리즘: *선택 문제 알고리즘*
+- 부분문제의 크기가 1,2개씩 감소하는 알고리즘: *삽입 정렬*, *피보나치 수의 계산* 등
+---
+
+1. **합병 정렬(Merge Sort)**    
+
+합병 정렬은 입력이 2개의 부분문제로 분할되고, 부분문제의 크기가 1/2로 감소하는 분할 정복 알고리즘이다.  
+![logo](data:image/png;base64,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)     
+
+아래는 합병 정렬을 java언어로 구현한 코드이다.
+
+```java
+
+import java.util.Random;
+
+public class DivideAndConquer {
+    private boolean isSomething(int start, int end) {
+        return start >= end;
+    }
+
+    // primitive type 원시 변수 [int, char, float, double, bool, short, long]
+    // instance variable
+    // 객체 [String, int[], Animal]: String str = new String("hello"); //
+
+    public void mergeSort(int[] arr, int start, int end) { // 6
+        if (isSomething(start, end)) { return; }   // 빠져나올 수 있는 조건
+
+        int mid = (start + end) / 2;        // start = 0, end = 5, mid = 2
+
+        mergeSort(arr, 0, mid);         // 왼쪽 분할 [0-2]
+        mergeSort(arr, mid+1, end);     // 오른쪽 분할 [3-5]
+
+        merge(arr, start, mid, end);         // 왼쪽 오른쪽 병합
+    }
+
+    private void merge(int[] arr, int start, int mid, int end) {
+        int p = start;
+        int q = mid + 1;
+        int idx = p;
+
+        int[] tmp = new int[arr.length];
+
+        while(p <= mid || q <= end) {
+            if (q > end || (p <= mid && arr[p] < arr[q])) {
+                tmp[idx++] = arr[p++];
+            } else {
+                tmp[idx++] = arr[q++];
+            }
+        }
+
+        if (end + 1 - start >= 0) System.arraycopy(tmp, start, arr, start, end + 1 - start);
+    }
+
+    public static void main(String[] args) {
+        Random r = new Random();
+
+        int[] arr = new int[20];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(1000);   // (0, 1000]
+        }
+
+        for (int k : arr) {
+            System.out.printf("%d ", k);
+        }
+        System.out.println();
+
+        DivideAndConquer dac = new DivideAndConquer();
+        dac.mergeSort(arr, 0, arr.length - 1);
+
+        for (int j : arr) {
+            System.out.printf("%d ", j);
+        }
+
+        System.out.println();
+
+    }
+}
+```
+
+2. **퀵 정렬(Quick Sort)**    
+
+퀵 정렬의 아이디어는 피봇(pivot)이라 일컷는 배열의 원소(숫자)를 기준으로 피봇보다 작은 숫자들은 왼편으로, 피봇보다 큰 숫자들은 오른편에 위치하도록 분할하고, 피봇을 그 사이에 놓는 것이다.  
+
+ 아래는 퀵 정렬을 java언어로 구현한 코드이다.
+ 
+ ```java
+
+import java.util.Random;
+
+public class Divideandconquer {
+
+    public static int partition(int[] arr, int l, int r){
+
+        int pivot;
+        pivot = (l + r) / 2;
+
+        while(l < r){
+            while(l <= r && arr[l] <= arr[pivot])
+            {
+                l++;
+            }
+            while(l <= r && arr[r]>arr[pivot])
+            {
+                r--;
+            }
+            if(l <= r){
+                int p = arr[l];
+                arr[l] = arr[r];
+                arr[r] = p;
+
+                if(r == p){
+                    return l;
+                }
+            }
+        }
+
+        if(r != pivot){
+            int p = arr[r];
+            arr[r] = arr[pivot];
+            arr[pivot] = p;
+        }
+        return r;
+
+    }
+
+    public void quickSort(int[] q, int l, int r){
+        if(l < r){
+            int newp = partition(q, l, r);
+            quickSort(q, l, newp-1);
+            quickSort(q, newp + 1, r);
+        }
+
+    }
+
+    public static void main(String[] args){
+        Random r = new Random();
+
+        int[] arr = new int[20];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(1000);   // (0, 1000]
+        }
+
+        for (int k : arr) {
+            System.out.printf("%d ", k);
+        }
+        System.out.println();
+
+        Divideandconquer dac = new Divideandconquer();
+        dac.quickSort(arr, 0, arr.length - 1);
+
+        for (int j : arr) {
+            System.out.printf("%d ", j);
+        }
+
+    }
+
+}
+ ```
+ 결과값:
+
+![logo](https://github.com/akizakic/akizakic.github.io/blob/main/%ED%80%B5%EC%86%94%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%EA%B0%92.png?raw=true)
+
+
+3. **선택(Selection) 문제**   
+
+선택 문제는 n개의 숫자들 중에서 k번째로 작은 숫자를 찾는 문제이다.
+선택 문제를 해결하기 위한 간단한 방법은 다음과 같다.    
+- 최소 숫자를 k번 찾는다. 단, 최소 숫자를 찾은 뒤에는 입력에서 그 숫자를 제거한다.  
+- 숫자들을 오름차순으로 정렬한 후, k번째 숫자를 찾는다.
+
+![logo](https://gmlwjd9405.github.io/images/algorithm-selection-sort/selection-sort.png)
+
+
+4. **최근접 점의 쌍(Closest Pair)**     
+
+최근접 점의 쌍을 찾는 문제는 2차원 평면상의 n개의 점이 입력으로 주어질 때, 거리가 가장 가까운 한 쌍의 점을 찾는 문제이다. 최근접 점의 쌍을 찾는 가장 간단한 방법은 모든 점에 대하여 각각의 두 점 사이의 거리를 계산하여 가장 가까운 점의 쌍을 찾는 것인데 이 방법의 시간복잡도는 O(n^2)이다.    
+이보다 효율적인 방법은 분할 정복을 이용하는 것이다. 즉, n개의 점을 1/2로 분할하여 각각의 부분문제에서 최근접 점의 쌍을 찾고, 2개의 부분해 중에서 짧은 거리를 가진 점의 쌍을 일단 찾는다. 그리고 2개의 부분해를 취합할 때, 반드시 중간 영역 안에 있는 점들 중에 최근접 점의 쌍이 있는지도 확인해보아야 한다. 향상된 알고리즘의 시간복잡도는 O(nlogn)이다.
+   
+![logo](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpN8NR%2FbtrhzdaHpTo%2FUQr3VhR5NOyDcKNAuVTO41%2Fimg.png)
+
+
