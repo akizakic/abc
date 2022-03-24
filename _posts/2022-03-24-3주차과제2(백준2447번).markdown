@@ -1,6 +1,6 @@
 ---
 layout : post
-title:  3주차 과제
+title:  3주차 과제2(백준 2447번)
 date:   2022-03-24 13:28:38 +0900
 categories: jekyll update
 
