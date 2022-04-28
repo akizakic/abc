@@ -44,7 +44,7 @@
 
 
 
-## 알고리즘 설명
+## Ford-Fulkerson알고리즘 설명
 
 네트워크의 유량의 가장 기본적인 알고리즘은, 포드 풀커슨(Ford - Fulkersodn) 알고리즘과, 에드몬트카프(Edmonds - Karp) 알고리즘이 있다.
 
