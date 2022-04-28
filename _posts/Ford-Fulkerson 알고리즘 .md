@@ -92,10 +92,6 @@ dfs 코드(깊이 우선 탐색)
     }
 ```
 
-public static Path findPath() {
-    // dfs or bfs
-    // c(a, b) - f(a, b) > 0 조건에 따라서 path을 찾을 수 있게 함.
-}
 
 
 ```
