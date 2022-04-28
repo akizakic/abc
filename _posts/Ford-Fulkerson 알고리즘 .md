@@ -59,14 +59,25 @@
 
 그림을 통해 이해해보자.
 
-![Algorithm](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb1wkEf%2Fbtrn1zzImKX%2FkFqrs5B8VOhgCnV4kjMKI1%2Fimg.png)
+![Algorithm](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIbcFj%2Fbtrn1gG9AuM%2FS3rGLKaRJQgXQUekMjSlv0%2Fimg.png)
 
-위 그림에서, DFS(깊이 우선 탐색) 를 이용한 증가 경로 탐색은 아래와 같습니다.
+- 위 그림에서, DFS(깊이 우선 탐색) 를 이용한 증가 경로 탐색은 아래와 같다.
+
+![Algorithm](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAj8EH%2Fbtrn4q25OWZ%2FANSV0s2LKVeUj6s8byCkGk%2Fimg.png)
+
+- s->b->a->t 경로에 존재하는 간선들의 잔여 용량을 확인한 뒤, 잔여 용량 중 가장 작은 값인 1을 유량으로 흘려보낸다.
+
+![Algorithm](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbGipEw%2Fbtrn1hTxMaE%2FbrITVR2GHuUwqwjlKKnZ30%2Fimg.png)
+
+- 결과적으로, 간선 (a,b)와 (b,a)가 상쇄되므로, 아래와 같은 정답이 도출되는 것을 알 수 있다.
+![Algorithm](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeFiu69%2Fbtrn1y8CYON%2F4yDK5W48LKLXwtHHZQZyk1%2Fimg.png)
 - A→B→C→D (1의 유량 보냄)
 - A→C→B→D (역간선을 이용해 1의 유량 보냄)
 - A→B→C→D (1의 유량 보냄)
 - A→C→B→D (역간선을 이용해 1의 유량 보냄)
 - 반복
+
+
 
 
 
